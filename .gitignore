@@ -1,0 +1,44 @@
+# Môi trường ảo (Virtual Environments)
+venv/
+.venv/
+env/
+ENV/
+
+# Môi trường & Bí mật (Environment Variables & Secrets)
+.env
+*.env
+!.env.example
+
+# Python Cache & Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Build & Package Artifacts
+build/
+dist/
+*.egg-info/
+*.whl
+
+# IDE & Editor Configs
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Database & Vector DB Data
+*.db
+*.sqlite
+*.sqlite3
+chroma_db/
+vector_db/
+pgdata/
+
+# Logs & Temporary Files
+*.log
+AI_READ/
+AI-READ/
