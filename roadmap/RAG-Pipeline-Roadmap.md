@@ -16,7 +16,7 @@
 | 3 | **Indexing** | 🟡 **Đang dở dang** (50%) | `Rag-app/database.py`<br>`Rag-app/main.py` | - Kết nối PostgreSQL + pgvector<br>🔴 **Cần sửa**: Bug đóng connection sớm ở `database.py`<br>🔴 **Cần làm**: Script khởi tạo Table & Index (HNSW) |
 | 4 | **Retrieval** | 🔴 **Chưa bắt đầu** | `Rag-app/retriever.py` | 🔴 **Cần làm**: Hàm `search_similar_chunks(query, top_k)` dùng cosine distance trong pgvector |
 | 5 | **Augmentation** | 🔴 **Chưa bắt đầu** | `Rag-app/prompt_builder.py` | 🔴 **Cần làm**: Prompt Template gộp context + câu hỏi người dùng |
-| 6 | **Generation** | 🟡 **Thử nghiệm** (30%) | `Rag-app/AI-model.py` | - Đã test gọi LLM qua LM Studio<br>🔴 **Cần làm**: Tích hợp luồng RAG hoàn chỉnh (End-to-End) |
+| 6 | **Generation** | 🟢 **Hoàn thành** | `Rag-app/ai_model.py`<br>`Rag-app/main.py` | - Đã kết nối luồng RAG hoàn chỉnh (End-to-End) trong `main.py` |
 
 ---
 
@@ -35,14 +35,14 @@
 ### 2. 🔍 Xây dựng Module Retrieval (Bước 4)
 - [x] Tạo file `Rag-app/retriever.py`
 - [x] Tạo hàm `embed_query(user_query)`
-- [ ] Thực hiện truy vấn Vector Similarity với pgvector:
+- [x] Thực hiện truy vấn Vector Similarity với pgvector:
   ```sql
   SELECT content, source, 1 - (embedding <=> %s::vector) AS similarity
   FROM notes
   ORDER BY embedding <=> %s::vector
   LIMIT %s;
   ```
-- [ ] Lọc và trả về Top-K chunks liên quan nhất.
+- [x] Lọc và trả về Top-K chunks liên quan nhất.
 
 ### 3. 📝 Augmentation & Prompt Engineering (Bước 5)
 - [ ] Tạo file `Rag-app/prompt_builder.py`
