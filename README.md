@@ -35,7 +35,6 @@ rag-vault/
 │   ├── dockerfile       # Dockerfile for Python application environment
 │   ├── requirements.txt # Python package dependencies
 │   └── .env             # Environment configuration file
-├── roadmap/             # RAG pipeline roadmap and engineering documentation
 ├── docker-compose.yml   # Docker Compose config for PostgreSQL + pgvector container
 └── README.md            # Project documentation
 ```
