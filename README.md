@@ -149,12 +149,6 @@ Sources: Work/Q3_Goals.md, Projects/Roadmap.md
 
 ---
 
-## 📝 Roadmap
-
-Detailed development stages, pending improvements, and technical milestones can be found in [roadmap/RAG-Pipeline-Roadmap.md](roadmap/RAG-Pipeline-Roadmap.md).
-
----
-
 ## 📄 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
